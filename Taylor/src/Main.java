@@ -14,7 +14,7 @@ public class Main {
         {
         System.out.println("Enter x");
         x = in.nextDouble();
-        if(x<-1|| x>1)
+        if(x < -1 || x > 1)
         {
             System.out.println("Incorrect data");
             return;
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Enter k");
          k=in.nextInt();
         }
-        catch (Throwable ex){
+        catch (Throwable wrongType){
             System.out.println("Error occurred while reading input!");
             return;
         }
