@@ -11,11 +11,11 @@ public class SortCol
         int curPos = i - (i - j) / 2;
         while (i < j)
         {
-            while (i < curPos && (Arr[i][0] <= Arr[curPos][0]))
+            while (i < curPos && (Arr[i][0] >= Arr[curPos][0]))
             {
                 i++;
             }
-            while (j > curPos && (Arr[curPos][0] <= Arr[j][0]))
+            while (j > curPos && (Arr[curPos][0] >= Arr[j][0]))
             {
                 j--;
             }
@@ -34,7 +34,8 @@ public class SortCol
                 }
             }
         }
-        sortCol(startPos, curPos, Arr);
         sortCol(curPos+1, endPos,Arr);
+        sortCol(startPos, curPos, Arr);
+
     }
 }
